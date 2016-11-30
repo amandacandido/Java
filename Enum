@@ -1,0 +1,17 @@
+public enum Categoria {POPULAR, INTERMEDIARIO, LUXO}
+
+public enum Estado {NOVO, LOCADO, DISPONIVEL, VENDIDO}
+
+public enum Marca {WV, GM, HONDA, FIAT, MERCEDES}
+
+public enum ModeloAutomovel {Gol, Celta, Palio}
+
+public enum ModeloMotocicleta {CG 125, CBR 500}
+
+public enum ModeloVan {Kombi, Sprinter}
+
+//exemplo NA MAIN
+
+Categoria c1 = Categoria.POPULAR;
+
+}
