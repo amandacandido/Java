@@ -17,8 +17,9 @@ public abstract class Veiculo implements VeiculoI {
     private double valorDeCompra;
     private String placa;
     private int ano;
+    private int idadeVeiculoEmAnos;
 
-    public Veiculo(Marca marca, Estado estado, Locacao locacao, Categoria categoria, double valorDeCompra, String placa, int ano) {
+    public Veiculo(Marca marca, Estado estado, Locacao locacao, Categoria categoria, double valorDeCompra, String placa, int ano, int idadeVeiculoEmAnos) {
         this.marca = marca;
         this.estado = estado;
         this.locacao = locacao;
@@ -26,18 +27,25 @@ public abstract class Veiculo implements VeiculoI {
         this.valorDeCompra = valorDeCompra;
         this.placa = placa;
         this.ano = ano;
+        this.idadeVeiculoEmAnos = idadeVeiculoEmAnos;
     }
 
     public abstract double getValorDiariaLocacao();
 
     //Muda estado para LOCADO. Cria uma instância de Locacao e armazena no atributo locacao. Chama o método getValorDiariaLocacao para calcular o valor da locação.
-    public void locar(int dias, Calendar data, Cliente cliente){}
+    public void locar(int dias, Calendar data, Cliente cliente){
+    
+    };
 
     //Muda estado para VENDIDO e não pode mais ser alugado
-    public void vender();
+    public void vender(){
+    
+    };
 
     //Muda estado para DISPONIVEL
-    public void devolver();
+    public void devolver(){
+    
+    };
 
 
     public Estado getEstado() {
@@ -68,6 +76,9 @@ public abstract class Veiculo implements VeiculoI {
     //valorParaVenda = valorDeCompra – idadeVeiculoEmAnos*0,15*valorDeCompra
     //Se o resultado for menor do que 10% do valorDeCompra ou negative, então
     // varlorParaVenda = valorDeCompra*0,1
-    public double getValorParaVenda();
+    public double getValorParaVenda(){
+        
+        
+    }
 
 }
