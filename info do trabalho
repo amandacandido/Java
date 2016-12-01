@@ -104,6 +104,6 @@ O sistema terá os seguintes requisitos:
   Itens para serem entregues:
       1. Diagrama de classes
       2. Diagrama de E-R
-      3. Projeto na IDE Eclipse ou Netbeans com código fonte
+      3. Projeto na IDE Eclipse ou Netbeans com código fonte 
       4. Script para criação do banco de dados
       5. Arquivo .jar executável
