@@ -20,6 +20,8 @@ public class Automovel extends Veiculo {
     
     public ModeloAutomovel getModelo(){
     
+        return modelo;
+    }  
     
     
     }
