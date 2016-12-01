@@ -90,10 +90,10 @@ O sistema terá os seguintes requisitos:
           b. O usuário poderá escolher uma linha da tabela e clicar em um botão “Devolver veículo” para devolver o veículo. O sistema deve acionar o método devolver do veículo que coloca o objeto Locacao para null, apaga da base de dados e muda o estado do veículo para DISPONÌVEL.
 
   5. Uma tela para vender os veículos.
-        a. Deve ser possível filtrar os veículos por tipo (Automóvel, Van ou Motocicleta), por marca e/ou por categoria.
-        b. Depois de filtrado, deve aparecer uma tabela com os veículos que estão disponíveis para venda (Estado DISPONIVEL), com as seguintes colunas: Placa, Marca, Modelo, Ano, Preço para venda. O ano deve aparecer com 4 dígitos, o preço deve aparecer com a formatação R$XXX,XX (onde X é um numérico de 0 a 9. Utilize AbstractTableModel para isso.
-        c. Para vender o veículo, o usuário deve clicar em um veículo na tabela e depois clicar em um botão Vender.
-        d. Depois de clicar em Vender o sistema deve acionar o método vender do veículo instanciado (Descrição na interface VeiculoI). O veiculo deve ser atualizado na base de dados. Este veículo não deve mais aparecer na tabela para ser locado.
+           a. Deve ser possível filtrar os veículos por tipo (Automóvel, Van ou Motocicleta), por marca e/ou por categoria.
+           b. Depois de filtrado, deve aparecer uma tabela com os veículos que estão disponíveis para venda (Estado DISPONIVEL), com as seguintes colunas: Placa, Marca, Modelo, Ano, Preço para venda. O ano deve aparecer com 4 dígitos, o preço deve aparecer com a formatação R$XXX,XX (onde X é um numérico de 0 a 9. Utilize AbstractTableModel para isso.
+           c. Para vender o veículo, o usuário deve clicar em um veículo na tabela e depois clicar em um botão Vender.
+           d. Depois de clicar em Vender o sistema deve acionar o método vender do veículo instanciado (Descrição na interface VeiculoI). O veiculo deve ser atualizado na base de dados. Este veículo não deve mais aparecer na tabela para ser locado.
 
   O programa acima deve ser feito utilizando as seguintes tecnologias:
       -Utilizar herança para definir as classes Veiculo, Automovel, Motocicleta e Van. Utilize classes abstratas quando necessário.
