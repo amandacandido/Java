@@ -35,12 +35,12 @@ public abstract class Veiculo implements VeiculoI {
     //Muda estado para LOCADO. Cria uma instância de Locacao e armazena no atributo locacao. Chama o método getValorDiariaLocacao para calcular o valor da locação.
     public void locar(int dias, Calendar data, Cliente cliente){
     
-    };
+    }
 
     //Muda estado para VENDIDO e não pode mais ser alugado
     public void vender(){
     
-    };
+    }
 
     //Muda estado para DISPONIVEL
     public void devolver(){
@@ -77,7 +77,7 @@ public abstract class Veiculo implements VeiculoI {
     //Se o resultado for menor do que 10% do valorDeCompra ou negative, então
     // varlorParaVenda = valorDeCompra*0,1
     public double getValorParaVenda(){
-        
+         
         
     }
 
