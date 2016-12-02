@@ -1,6 +1,3 @@
-
-import java.sql.Connection;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,7 +8,4 @@ import java.sql.Connection;
  *
  * @author Tommy
  */
-public class ClienteDao {
-    Connection con;
-    
-}
+public enum Tipo {AUTOMOVEL, MOTOCICLETA, VAN};

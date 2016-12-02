@@ -15,14 +15,15 @@ public abstract class Veiculo implements VeiculoI {
     private Marca marca;
     private Estado estado;
     private Locacao locacao;
-    Categoria categoria;
+    private Categoria categoria;
     private double valorDeCompra;
     private String placa;
     private int ano;
     private int idadeVeiculoEmAnos;
-    double valorDiaria;
+    private Tipo tipo;
 
-    public Veiculo(Marca marca, Estado estado, Locacao locacao, Categoria categoria, double valorDeCompra, String placa, int ano, int idadeVeiculoEmAnos, double valorDiaria) {
+
+    public Veiculo(Marca marca, Estado estado, Locacao locacao, Categoria categoria, double valorDeCompra, String placa, int ano, int idadeVeiculoEmAnos) {
         this.marca = marca;
         this.estado = estado;
         this.locacao = locacao;
@@ -31,7 +32,6 @@ public abstract class Veiculo implements VeiculoI {
         this.placa = placa;
         this.ano = ano;
         this.idadeVeiculoEmAnos = idadeVeiculoEmAnos;
-        this.valorDiaria = valorDiaria;
     }
 
     public abstract double getValorDiariaLocacao();
@@ -76,6 +76,15 @@ public abstract class Veiculo implements VeiculoI {
     public int getAno() {
         return ano;
     }
+    
+    public Tipo getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(Tipo tipo) {
+        this.tipo = tipo;
+    }
+
     
     //Método que calcula um valor para venda. Utilizar o seguinte cálculo:
     //valorParaVenda = valorDeCompra – idadeVeiculoEmAnos*0,15*valorDeCompra
