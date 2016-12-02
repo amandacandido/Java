@@ -4,13 +4,12 @@ use dbjava
 
 //tabela cliente
 CREATE TABLE cliente (
-  idcliente int,
   cpf varchar(11) NOT NULL,
   nome varchar(50),
   sobrenome varchar(150),
   rg varchar(12),
   endereco varchar(150),
-  PRIMARY KEY (idcliente));
+  PRIMARY KEY (cpf));
 
 //tabela veiculo
 CREATE TABLE veiculo (
@@ -31,9 +30,9 @@ codlocacao int,
 dias int,
 valor double,
 data date,
-codcliente int,
+codcliente varchar(11),
 codveiculo int,
 PRIMARY KEY (codlocacao),
-FOREIGN KEY (codcliente) REFERENCES cliente(idcliente),
+FOREIGN KEY (codcliente) REFERENCES cliente(cpf),
 FOREIGN KEY (codveiculo) REFERENCES veiculo(codveiculo));
 
