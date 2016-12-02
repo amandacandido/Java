@@ -12,7 +12,7 @@ public class Van extends Veiculo {
 
     private ModeloVan modelo;
 
-    public Van(Marca marca, Estado estado, Locacao locacao, Categoria categoria, double valorDeCompra, String placa, int ano, int idadeVeiculoEmAnos) {
+    public Van(Marca marca, ModeloVan modelo, Estado estado, Locacao locacao, Categoria categoria, double valorDeCompra, String placa, int ano, int idadeVeiculoEmAnos) {
         super(marca, estado, locacao, categoria, valorDeCompra, placa, ano, idadeVeiculoEmAnos);
         this.modelo = modelo;
     }
@@ -26,8 +26,13 @@ public class Van extends Veiculo {
        
     @Override
     public double getValorDiariaLocacao () {
-    
-    return 0.0;
+        if (getCategoria() == Categoria.POPULAR){
+            return 200.00;
+        } else if (getCategoria() == Categoria.INTERMEDIARIO){
+            return 400.00;
+        } else {
+            return 600.00;
+        }
     }
 
     

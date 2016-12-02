@@ -12,7 +12,7 @@ public class Motocicleta extends Veiculo {
 
     private ModeloMotocicleta modelo;
 
-    public Motocicleta(Marca marca, Estado estado, Locacao locacao, Categoria categoria, double valorDeCompra, String placa, int ano, int idadeVeiculoEmAnos) {
+    public Motocicleta(Marca marca,ModeloMotocicleta modelo, Estado estado, Locacao locacao, Categoria categoria, double valorDeCompra, String placa, int ano, int idadeVeiculoEmAnos) {
         super(marca, estado, locacao, categoria, valorDeCompra, placa, ano, idadeVeiculoEmAnos);
         this.modelo = modelo;
     }
@@ -25,8 +25,13 @@ public class Motocicleta extends Veiculo {
     
     @Override
     public double getValorDiariaLocacao () {
-    
-    return 0;
+        if (getCategoria() == Categoria.POPULAR){
+            return 70.00;
+        } else if (getCategoria() == Categoria.INTERMEDIARIO){
+            return 200.00;
+        } else {
+            return 350.00;
+        }
     }
 
     
