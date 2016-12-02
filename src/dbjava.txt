@@ -2,14 +2,7 @@ CREATE DATABASE dbjava;
 
 use database dbjava
 
-//tabela cidade
 
-CREATE TABLE cidade (
-	codcidade int NOT NULL AUTO_INCREMENT,
-	nome varchar(100),
-	uf int,
-  PRIMARY KEY (codcidade)
-  ADD CONSTRAINT fkcidade_uf FOREIGN KEY (uf_coduf) REFERENCES uf (coduf);
 
 //tabela cliente
 
@@ -20,12 +13,8 @@ CREATE TABLE cliente (
   rg varchar(12),
   rua varchar(150),
   numero int DEFAULT NULL,
-  codcidade int,
-  uf int,
   PRIMARY KEY (cpf), 
-  UNIQUE KEY ukrg (rg)
-  FOREIGN KEY (codcidade) REFERENCES cidade (codcidade),
-  FOREIGN KEY (uf) REFERENCES uf (coduf);
+  UNIQUE KEY ukrg (rg));
 
 //tabela veiculo
 
@@ -40,16 +29,6 @@ placa varchar(10),
 ano int(4),
 PRIMARY KEY (codveiculo')
 ) ;
-
-//tabela uf
-
-CREATE TABLE uf (
-	coduf int NOT NULL AUTO_INCREMENT,
-	sigla varchar(2),
-	nome varchar(30),
-  PRIMARY KEY (coduf), 
-  UNIQUE KEY ukuf (sigla,nome)
-);
 
 
 //População < terminar
