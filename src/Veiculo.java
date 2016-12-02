@@ -15,13 +15,14 @@ public abstract class Veiculo implements VeiculoI {
     private Marca marca;
     private Estado estado;
     private Locacao locacao;
-    private Categoria categoria;
+    Categoria categoria;
     private double valorDeCompra;
     private String placa;
     private int ano;
     private int idadeVeiculoEmAnos;
+    double valorDiaria;
 
-    public Veiculo(Marca marca, Estado estado, Locacao locacao, Categoria categoria, double valorDeCompra, String placa, int ano, int idadeVeiculoEmAnos) {
+    public Veiculo(Marca marca, Estado estado, Locacao locacao, Categoria categoria, double valorDeCompra, String placa, int ano, int idadeVeiculoEmAnos, double valorDiaria) {
         this.marca = marca;
         this.estado = estado;
         this.locacao = locacao;
@@ -30,6 +31,7 @@ public abstract class Veiculo implements VeiculoI {
         this.placa = placa;
         this.ano = ano;
         this.idadeVeiculoEmAnos = idadeVeiculoEmAnos;
+        this.valorDiaria = valorDiaria;
     }
 
     public abstract double getValorDiariaLocacao();
