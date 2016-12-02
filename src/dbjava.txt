@@ -27,6 +27,11 @@ ano int(4),
 PRIMARY KEY (codveiculo')
 ) ;
 
+//tabela de locacao
+CREATE TABLE cliente_veiculo (
+codveiculo int(3),
+codcliente int(3)) ;
+
 
 INSERT INTO cliente 
 (cpf, nome, sobrenome, rg, endereco) VALUES
