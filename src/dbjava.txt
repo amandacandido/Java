@@ -2,8 +2,6 @@ CREATE DATABASE dbjava;
 
 use database dbjava
 
-
-
 //tabela cliente
 
 CREATE TABLE cliente (
@@ -30,18 +28,6 @@ ano int(4),
 PRIMARY KEY (codveiculo')
 ) ;
 
-
-//População < terminar
-
-INSERT INTO uf (sigla, nome) VALUES
-('AC', 'Acre'),
-('AL', 'Alagoas'),
-('AM', 'Amazonas'),
-('AP', 'Amapá'),
-);
-
-INSERT INTO cidade (nome, uf) VALUES
-);
 
 INSERT INTO cliente 
 (cpf, nome, sobrenome, rg, endereco) VALUES
