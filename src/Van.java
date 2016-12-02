@@ -27,7 +27,7 @@ public class Van extends Veiculo {
     @Override
     public double getValorDiariaLocacao () {
     
-    
+    return 0.0;
     }
 
     

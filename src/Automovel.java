@@ -27,7 +27,7 @@ public class Automovel extends Veiculo {
     @Override
     public double getValorDiariaLocacao () {
     
-    
+    return 0;
     }
 
     

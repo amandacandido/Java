@@ -1,3 +1,6 @@
+
+import java.util.Calendar;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -33,17 +36,18 @@ public abstract class Veiculo implements VeiculoI {
 
     //Muda estado para LOCADO. Cria uma instância de Locacao e armazena no atributo locacao. Chama o método getValorDiariaLocacao para calcular o valor da locação.
     public void locar(int dias, Calendar data, Cliente cliente){
-    
+        this.estado = Estado.LOCADO;
+        this.locacao = new Locacao(dias, getValorDiariaLocacao(), data, cliente);
     }
 
     //Muda estado para VENDIDO e não pode mais ser alugado
     public void vender(){
-    
+        this.estado = Estado.VENDIDO;
     }
 
     //Muda estado para DISPONIVEL
     public void devolver(){
-    
+        this.estado = Estado.DISPONIVEL;
     };
 
 
@@ -52,7 +56,7 @@ public abstract class Veiculo implements VeiculoI {
     }
     
     public Marca getMarca() {
-        return estado;
+        return marca;
     }
 
     public Categoria getCategoria() {
@@ -76,8 +80,11 @@ public abstract class Veiculo implements VeiculoI {
     //Se o resultado for menor do que 10% do valorDeCompra ou negative, então
     // varlorParaVenda = valorDeCompra*0,1
     public double getValorParaVenda(){
-         
-        
+        double valorParaVenda;
+        valorParaVenda = this.valorDeCompra - this.idadeVeiculoEmAnos*0.15*this.valorDeCompra;
+        if (valorParaVenda < (this.valorDeCompra*0.1))
+            valorParaVenda = this.valorDeCompra*0.1;
+        return valorParaVenda;
     }
 
 }
