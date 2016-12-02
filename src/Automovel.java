@@ -13,8 +13,8 @@ public class Automovel extends Veiculo {
 
     private ModeloAutomovel modelo;
 
-    public Automovel(Marca marca, Estado estado, Locacao locacao, Categoria categoria, double valorDeCompra, String placa, int ano, int idadeVeiculoEmAnos) {
-        super(marca, estado, locacao, categoria, valorDeCompra, placa, ano, idadeVeiculoEmAnos);
+    public Automovel(Marca marca, Estado estado, Locacao locacao, Categoria categoria, double valorDeCompra, String placa, int ano, int idadeVeiculoEmAnos, double valorDiaria) {
+        super(marca, estado, locacao, categoria, valorDeCompra, placa, ano, idadeVeiculoEmAnos, valorDiaria);
         this.modelo = modelo;
     }
     
@@ -27,8 +27,23 @@ public class Automovel extends Veiculo {
     @Override
     public double getValorDiariaLocacao () {
     
-    return 0;
+        switch (categoria) {
+            case POPULAR:
+                this.valorDiaria = 100;
+                break;
+            case INTERMEDIARIO:
+                this.valorDiaria = 300;
+                break;
+            case LUXO:
+                this.valorDiaria = 450;
+                break;
+            default:
+                break;
+        }
+        return valorDiaria;
     }
+    
+ }
 
     
-}
+
