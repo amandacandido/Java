@@ -1,41 +1,39 @@
 CREATE DATABASE dbjava;
 
-use database dbjava
+use dbjava
 
 //tabela cliente
-
 CREATE TABLE cliente (
+  idcliente int,
   cpf varchar(11) NOT NULL,
   nome varchar(50),
   sobrenome varchar(150),
   rg varchar(12),
-  rua varchar(150),
-  numero int DEFAULT NULL,
-  PRIMARY KEY (cpf));
+  endereco varchar(150),
+  PRIMARY KEY (idcliente));
 
 //tabela veiculo
-
 CREATE TABLE veiculo (
 codveiculo int NOT NULL AUTO_INCREMENT,
-marca int(11),
-estado int(11),
-locacao int(11),
-categoria int(11),
-valordecompra float(20)
+marca int,
+estado int,
+locacao int,
+categoria int,
+valordecompra float,
+idade int,
 placa varchar(10),
 ano int(4),
-PRIMARY KEY (codveiculo')
-) ;
+PRIMARY KEY (codveiculo));
 
 //tabela de locacao
-CREATE TABLE cliente_veiculo (
-codveiculo int(3),
-codcliente int(3)) ;
-
-
-INSERT INTO cliente 
-(cpf, nome, sobrenome, rg, endereco) VALUES
-('06424749900', 'Amanda', 'Candido', '1234567-9','Rua Alagoas 396'),
-('34946648380', 'Tommy', 'Santos', '1234569-4', 'Rua Parintins 333'),
-('72857731744', 'Claisa', 'Lubke', '1234567-0', 'Rua das Flores 100');
+CREATE TABLE loca (
+codlocacao int,
+dias int,
+valor double,
+data date,
+codcliente int,
+codveiculo int,
+PRIMARY KEY (codlocacao),
+FOREIGN KEY (codcliente) REFERENCES cliente(idcliente),
+FOREIGN KEY (codveiculo) REFERENCES veiculo(codveiculo));
 
