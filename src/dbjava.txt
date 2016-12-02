@@ -30,7 +30,7 @@ CREATE TABLE cliente (
 //tabela veiculo
 
 CREATE TABLE veiculo (
-codveiculo int NOT NULL AUTOINCREMENT,
+codveiculo int NOT NULL AUTO_INCREMENT,
 marca int(11),
 estado int(11),
 locacao int(11),
@@ -65,8 +65,8 @@ INSERT INTO cidade (nome, uf) VALUES
 );
 
 INSERT INTO cliente 
-(cpf, nome, sobrenome, rg, rua, numero, codcidade, uf) VALUES
-('06424749900', 'Amanda', 'Candido', '1234567-9','Rua Alagoas', 396, 1, 1),
-('34946648380', 'Tommy', 'Santos', '1234569-4', 'Rua Parintins, 333, 4, 2),
-('72857731744', 'Claisa', 'Lubke', '1234567-0', 'Rua das Flores', 100, 1, 1),
+(cpf, nome, sobrenome, rg, endereco) VALUES
+('06424749900', 'Amanda', 'Candido', '1234567-9','Rua Alagoas 396'),
+('34946648380', 'Tommy', 'Santos', '1234569-4', 'Rua Parintins 333'),
+('72857731744', 'Claisa', 'Lubke', '1234567-0', 'Rua das Flores 100');
 

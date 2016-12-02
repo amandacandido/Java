@@ -8,19 +8,14 @@
  * @author Amanda
  */
 public class Cliente {
-    private String nome, sobrenome, CPF, RG, rua ;
-    private int numero, cidade, uf;
+    private String nome, sobrenome, CPF, RG, endereco ;
         
-    public Cliente(String nome, String sobrenome, String CPF, String RG, String rua, int numero, 
-            int cidade, int uf) {
+    public Cliente(String nome, String sobrenome, String CPF, String RG, String endereco) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.CPF = CPF;
         this.RG = RG;
-        this.rua = rua;
-        this.cidade = cidade;
-        this.uf = uf;
-        this.numero = numero;
+        this.endereco = endereco;
     }
 
     public void setNome(String nome) {
@@ -37,10 +32,6 @@ public class Cliente {
 
     public void setRG(String RG) {
         this.RG = RG;
-    }
-
-    public void setUf(int uf) {
-        this.uf = uf;
     }
         
     public String getNome() {
@@ -59,36 +50,11 @@ public class Cliente {
         return RG;
     }
 
-    public String getRua() {
-        return rua;
+    public String getEndereco() {
+        return endereco;
     }
    
-    public void setRua(String rua) {
-        this.rua = rua;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
-
-    public int getNumero() {
-        return numero;
-    }    
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    public int getCidade() {
-        return cidade;
-    }
-    
-    public void setCidade(int cidade) {
-        this.cidade = cidade;
-    }
-
-    public int getUF() {
-        return uf;
-    }
-    
-    public void setUF(int uf) {
-        this.uf = uf;
-    }
-    
 }
